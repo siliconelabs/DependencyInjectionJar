@@ -1,15 +1,21 @@
 package com.FirstSpringBootDependencyInjection2.DependencyInjectionJar;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.time.LocalDateTime;
 
 
 @Component
 public class DateTime {
 
-    public DateTime() {
+    @Autowired
+    public LocalDateTime local;
+
+    @Autowired
+    public DateTime(LocalDateTime local) {
 
         System.out.println("DateTime Instance olusturuldu");
     }

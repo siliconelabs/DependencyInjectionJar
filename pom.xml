@@ -28,10 +28,19 @@
 			<scope>runtime</scope>
 			<optional>true</optional>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.siliconelabs</groupId>
+			<artifactId>JarUtil</artifactId>
+			<version>1.0.0</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/libs/JarUtil-1.0.0.jar</systemPath>
 		</dependency>
 	</dependencies>
 
@@ -40,6 +49,10 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+                 <configuration>
+					 <includeSystemScope>true</includeSystemScope>
+				 </configuration>
+
 			</plugin>
 		</plugins>
 	</build>

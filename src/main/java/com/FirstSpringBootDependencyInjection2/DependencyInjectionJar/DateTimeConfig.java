@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Configuration
 public class DateTimeConfig {
 
-    @Bean("getBith1")
+    @Bean("getBirth1")
     public LocalDate getBirthDate()
     {
         System.out.println("getBirthDate calıstı");
@@ -24,10 +24,5 @@ public class DateTimeConfig {
 
     }
 
-    @Bean
-    public LocalDateTime getLocalDateTime()
-    {
-        System.out.println("getLocal datetime calıstı");
-        return LocalDateTime.now();
-    }
+
 }
